@@ -1,0 +1,13 @@
+# IDEA
+.idea
+*.iml
+*.ipr
+*.iws
+
+# Scripts
+*.sh
+
+# Maven
+target
+
+.java-version
