@@ -4,8 +4,7 @@ package org.apache.struts.helloworld.model;
 
 // A model class to store the message
 /* The Struts 2 framework requires that objects exposed to the view (HelloWorld.jsp)
-* follow the JavaBean-style conventions.
-*/
+    follow the JavaBean-style conventions. */
 
 public class MessageStore {
     private final String message;
