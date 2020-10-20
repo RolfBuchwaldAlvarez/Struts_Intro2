@@ -1,6 +1,8 @@
 package org.apache.struts.helloworld.action;
 
-// Imports the MessageStore class (Model)
+// CONTROLLER Class (MVC)
+
+// Imports the MessageStore class (MVC MODEL)
 import org.apache.struts.helloworld.model.MessageStore;
 
 import com.opensymphony.xwork2.ActionSupport;
