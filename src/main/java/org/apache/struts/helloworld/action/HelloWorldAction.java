@@ -13,11 +13,12 @@ value of the result, a specific view page (here: HelloWorld.jsp) is rendered. */
 
 public class HelloWorldAction extends ActionSupport{
 
-    // Dependency Injection ?!?
+    // Dependency Injection ?!? -> Spring: public final MessageStore messageStore;
     private MessageStore messageStore;
 
+    // Creates an object of class MessageStore and then returns the String constant SUCCESS
     public String execute() {
-        messageStore = new MessageStore();
+        messageStore = new MessageStore(); // No Type ?!?!?
         return SUCCESS;
     }
 
