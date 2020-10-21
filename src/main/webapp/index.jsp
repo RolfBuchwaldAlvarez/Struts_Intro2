@@ -32,5 +32,11 @@
              reference. The query string parameter will be properly URL-endcoded (Bruce+Phillips) --%>
         <p><a href="${helloLink}">Hello Bruce Phillips</a></p>
 
+        <p>Get your own personal hello by filling out and submitting this form.</p>
+
+        <s:form action="hello">
+            <s:textfield name="userName" label="Your name" />
+            <s:submit value="Submit" />
+        </s:form>
     </body>
 </html>
