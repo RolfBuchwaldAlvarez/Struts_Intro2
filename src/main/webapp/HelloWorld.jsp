@@ -23,6 +23,8 @@
              (of the Action class) and then to include that value in the HTML returned to the browser. Useful
              S2 property-tag automatically converts the most common data types (int, double, boolean) to their
              String equivalents. --%>
+        <%-- If the value returned by the get-method is an object, the property tag will cause S2 to call the
+             object's toString-method. --%>
         <h2><s:property value="messageStore.message" /></h2>
 
         <%-- Even though getHelloCount() returns an integer type, S2 converted it to type String and placed it
