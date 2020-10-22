@@ -17,7 +17,9 @@
              it will cause the S2F to run the execute method of the HelloWorldAction class. After that
              method returns the String success (constant SUCCESS), the View page HelloWorld.jsp will be
              rendered. --%>
-        <p><a href="<s:url action='hello' />">Hello World</a></p>
+        <p>
+            <a href="<s:url action='hello' />">Hello World</a>
+        </p>
         <%-- Separated out the <s:url>-tag into its own code bloc --%>
         <%-- Notice the var attribute! Value of var is a reference that can be used later in the code
              to refer to the url created! --%>
@@ -30,7 +32,9 @@
 
         <%-- The View page will substitute the hyperlink that is created using the url tag for the ${helloLink}
              reference. The query string parameter will be properly URL-endcoded (Bruce+Phillips) --%>
-        <p><a href="${helloLink}">Hello Bruce Phillips</a></p>
+        <p>
+            <a href="${helloLink}">Hello Bruce Phillips</a>
+        </p>
 
         <p>Get your own personal hello by filling out and submitting this form.</p>
 
