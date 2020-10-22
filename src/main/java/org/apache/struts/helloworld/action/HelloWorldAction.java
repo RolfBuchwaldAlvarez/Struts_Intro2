@@ -32,6 +32,9 @@ public class HelloWorldAction extends ActionSupport{
     public String execute() throws Exception {
         helloCount++;
         messageStore = new MessageStore(); // No Type, since messageStore has already been created (see line 19)
+        if (userName != null) {
+            messageStore.setMessage(messageStore.getMessage() + " " + userName);
+        }
         return SUCCESS;
     }
 
