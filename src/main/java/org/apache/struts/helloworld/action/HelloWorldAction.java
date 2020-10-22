@@ -31,6 +31,7 @@ public class HelloWorldAction extends ActionSupport{
         return messageStore;
     }
 
+    // Not static !! For S2 to call getHelloCount(), this method cannot be static!
     public int getHelloCount() {
         return helloCount;
     }
