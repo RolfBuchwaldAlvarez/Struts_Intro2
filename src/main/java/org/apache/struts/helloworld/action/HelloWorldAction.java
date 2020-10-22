@@ -24,6 +24,8 @@ public class HelloWorldAction extends ActionSupport{
 
     private static int helloCount = 0;
 
+    private String userName;
+
     // Creates an object of class MessageStore and then returns the String constant SUCCESS
     // Overrides the execute-method of ActionSupport class
     // Here is where is placed what this Controller (this Action class) should do in response to "hello.action"
@@ -40,6 +42,14 @@ public class HelloWorldAction extends ActionSupport{
     // Not static !! For S2 to call getHelloCount(), this method cannot be static!
     public int getHelloCount() {
         return helloCount;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
 
