@@ -7,7 +7,7 @@ package org.apache.struts.helloworld.model;
     follow the JavaBean-style conventions. */
 
 public class MessageStore {
-    private final String message;
+    private String message;
 
     public MessageStore() {
         message = "Hello Struts User";
@@ -15,6 +15,10 @@ public class MessageStore {
 
     public String getMessage() {
         return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public String toString() {
