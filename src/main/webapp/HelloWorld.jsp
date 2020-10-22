@@ -19,6 +19,10 @@
              framework to call the getMessage method of that MessageStore object. The getMessage-method
              of class MessageStore returns a String. It is that String that will be displayed by the
              <s:property> tag --%>
+        <%-- Most common use of the property-tag is to "get" the value returned by calling a public get method
+             (of the Action class) and then to include that value in the HTML returned to the browser. Useful
+             S2 property-tag automatically converts the most common data types (int, double, boolean) to their
+             String equivalents. --%>
         <h2><s:property value="messageStore.message" /></h2>
     </body>
 </html>
