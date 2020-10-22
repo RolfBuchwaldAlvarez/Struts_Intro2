@@ -27,7 +27,7 @@ public class HelloWorldAction extends ActionSupport{
     // Creates an object of class MessageStore and then returns the String constant SUCCESS
     // Overrides the execute-method of ActionSupport class
     // Here is where is placed what this Controller (this Action class) should do in response to "hello.action"
-    public String execute() {
+    public String execute() throws Exception {
         helloCount++;
         messageStore = new MessageStore(); // No Type, since messageStore has already been created (see line 19)
         return SUCCESS;
