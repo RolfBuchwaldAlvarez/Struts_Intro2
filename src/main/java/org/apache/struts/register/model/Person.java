@@ -6,6 +6,9 @@ public class Person {
     private String email;
     private int age;
 
+    /* Since no constructor has been specified, Java will provide a default constructor that will set all instance
+       fields to their null values! */
+
     public String getFirstName() {
         return firstName;
     }
@@ -38,6 +41,7 @@ public class Person {
         this.age = age;
     }
 
+    // Returns a String representing the state of the object.
     @Override
     public String toString() {
         return "First Name: " + getFirstName() + " Last Name: " + getLastName() +
