@@ -24,5 +24,9 @@
              S2 property-tag automatically converts the most common data types (int, double, boolean) to their
              String equivalents. --%>
         <h2><s:property value="messageStore.message" /></h2>
+
+        <%-- Even though getHelloCount() returns an integer type, S2 converted it to type String and placed it
+             into the body of the p tag --%>
+        <p>I've said hello <s:property value="helloCount" /> times!</p>
     </body>
 </html>
