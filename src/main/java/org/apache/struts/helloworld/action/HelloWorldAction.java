@@ -25,6 +25,7 @@ public class HelloWorldAction extends ActionSupport{
     private static int helloCount = 0;
 
     // Creates an object of class MessageStore and then returns the String constant SUCCESS
+    // Overrides the execute-method of ActionSupport class
     public String execute() {
         helloCount++;
         messageStore = new MessageStore(); // No Type, since messageStore has already been created (see line 19)
