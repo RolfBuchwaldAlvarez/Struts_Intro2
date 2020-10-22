@@ -34,6 +34,10 @@
 
         <p>Get your own personal hello by filling out and submitting this form.</p>
 
+        <%-- Struts 2 form-, textfield-, and submit-tags will be converted into HTML. S2 creates an HTML table
+             inside the form to position the form elements. The S2 textfield tag creates an HTML input tag of type
+             text with a name value that matches the name value of the textfield tag. S2 also creates a label HTML
+             tag based on the label value of the textfield tag. --%>
         <s:form action="hello">
             <s:textfield name="userName" label="Your name" />
             <s:submit value="Submit" />
