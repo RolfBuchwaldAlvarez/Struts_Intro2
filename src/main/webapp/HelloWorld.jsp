@@ -30,5 +30,9 @@
         <%-- Even though getHelloCount() returns an integer type, S2 converted it to type String and placed it
              into the body of the p tag --%>
         <p>I've said hello <s:property value="helloCount" /> times!</p>
+
+        <%-- Since getMessageStore of HelloWorldAction class returns a MessageStore object, S2 will call
+             toString() of class MessageStore. The string returned by toString() will be displayed in the browser --%>
+        <p><s:property value="messageStore" /></p>
     </body>
 </html>
