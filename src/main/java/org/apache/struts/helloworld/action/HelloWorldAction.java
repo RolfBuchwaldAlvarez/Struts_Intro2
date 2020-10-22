@@ -18,6 +18,8 @@ public class HelloWorldAction extends ActionSupport{
     // Dependency Injection ?!? -> Spring: public final MessageStore messageStore;
     private MessageStore messageStore;
 
+    private static int helloCount = 0;
+
     // Creates an object of class MessageStore and then returns the String constant SUCCESS
     public String execute() {
         messageStore = new MessageStore(); // No Type, since messageStore has already been created (see line 19)
@@ -26,6 +28,10 @@ public class HelloWorldAction extends ActionSupport{
 
     public MessageStore getMessageStore() {
         return messageStore;
+    }
+
+    public int getHelloCount() {
+        return helloCount;
     }
 }
 
