@@ -38,6 +38,9 @@
              inside the form to position the form elements. The S2 textfield tag creates an HTML input tag of type
              text with a name value that matches the name value of the textfield tag. S2 also creates a label HTML
              tag based on the label value of the textfield tag. --%>
+        <%-- When user clicks on the submit button for this form-tag, "hello.action" will be executed. The form field
+             values will be posted to the S2 Action class (HelloWorldAction). The Action class automatically receives
+             those form field values provided it has a public set method that matches the form field name value. --%>
         <s:form action="hello">
             <s:textfield name="userName" label="Your name" />
             <s:submit value="Submit" />
