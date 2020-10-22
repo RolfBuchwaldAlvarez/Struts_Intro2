@@ -5,6 +5,7 @@ package org.apache.struts.helloworld.action;
 // Imports the MessageStore class (MVC MODEL)
 import org.apache.struts.helloworld.model.MessageStore;
 
+// S2 Action classes usually extend the ActionSupport class!
 import com.opensymphony.xwork2.ActionSupport;
 
 
