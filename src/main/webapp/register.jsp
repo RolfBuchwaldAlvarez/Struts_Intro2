@@ -22,6 +22,7 @@
             <%-- age attribute is of type integer. All form field input values are Strings. S2 automatically
                  converts the String value to int when calling setAge() of personBean --%>
             <s:textfield name="personBean.age" label="Age" />
+            <s:submit/>
         </s:form>
     </body>
 </html>
