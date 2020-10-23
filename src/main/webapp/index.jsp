@@ -50,8 +50,11 @@
             <s:submit value="Submit" />
         </s:form>
 
+        <%-- We use the Struts 2 url tag to create a link to action registerInput. We then use that link as the
+             value for the href attribute of the anchor tag. --%>
+        <s:url action="registerInput" var="registerInputLink" />
         <p>
-            <a href="register.jsp">Please register</a> for our prize drawing.
+            <s:a href="%{registerInputLink}">Please register</s:a> for our prize drawing.
         </p>
     </body>
 </html>
