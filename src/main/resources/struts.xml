@@ -25,6 +25,9 @@
         </action>
         <action name="register" class="org.apache.struts.register.action.RegisterAction" method="execute">
             <result name="success">/thankyou.jsp</result>
+            <!-- To redisplay the web page that has the form and include error messages to inform what
+                 went wrong -->
+            <result name="input">/register.jsp</result>
         </action>
     </package>
 </struts>
