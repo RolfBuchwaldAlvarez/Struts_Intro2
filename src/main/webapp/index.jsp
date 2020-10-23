@@ -50,8 +50,8 @@
             <s:submit value="Submit" />
         </s:form>
 
-        <s:form action="register">
-
-        </s:form>
+        <p>
+            <a href="register.jsp">Please register</a> for our prize drawing.
+        </p>
     </body>
 </html>
