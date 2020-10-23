@@ -17,12 +17,12 @@
             <%-- personBean object has to be specified in Action class that handles this form submission --%>
             <%-- .firstname, etc are references to the personBean object's attributes set()-methods and sets
                  the entered value to the instance field --%>
-            <s:textfield name="personBean.firstName" label="First name" />
-            <s:textfield name="personBean.lastName" label="Last name" />
-            <s:textfield name="personBean.email" label="Email" />
+            <s:textfield key="personBean.firstName" />
+            <s:textfield key="personBean.lastName" />
+            <s:textfield key="personBean.email" />
             <%-- age attribute is of type integer. All form field input values are Strings. S2 automatically
                  converts the String value to int when calling setAge() of personBean --%>
-            <s:textfield name="personBean.age" label="Age" />
+            <s:textfield key="personBean.age" />
             <s:submit/>
         </s:form>
     </body>
