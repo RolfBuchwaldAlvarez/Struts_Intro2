@@ -49,5 +49,9 @@
             <s:textfield name="userName" label="Your name" />
             <s:submit value="Submit" />
         </s:form>
+
+        <s:form action="register">
+
+        </s:form>
     </body>
 </html>
