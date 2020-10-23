@@ -29,5 +29,12 @@
                  went wrong -->
             <result name="input">/register.jsp</result>
         </action>
+        <!-- Instructs S2F to execute class RegisterAction's input method in response to action registerInput
+             input() is inherited by class RegisterAction from class ActionSupport. Default behavior input()
+             is to return the String input. -->
+        <action name="registerInput" class="org.apache.struts.register.action.RegisterAction" method="input" >
+            <!-- Result node specifies that if returned result is input then render register.jsp -->
+            <result name="input">/register.jsp</result>
+        </action>
     </package>
 </struts>
