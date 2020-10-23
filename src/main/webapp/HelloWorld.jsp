@@ -4,6 +4,7 @@
 
 <%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 
+<%-- Since we use S2 tags, we need the Struts tag library declaration --%>
 <%-- taglib tells Servlet container that this page will be using Struts 2 tags preceded by an "s" --%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
