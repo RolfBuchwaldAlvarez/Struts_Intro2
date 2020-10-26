@@ -44,7 +44,7 @@ public class Person {
     // Returns a String representing the state of the object.
     @Override
     public String toString() {
-        return "First Name: " + getFirstName() + " Last Name: " + getLastName() +
-            " Email: " + getEmail() + " Age: " + getAge();
+        return "First Name: " + getFirstName() + ", Last Name: " + getLastName() +
+            ", Email: " + getEmail() + ", Age: " + getAge();
     }
 }
