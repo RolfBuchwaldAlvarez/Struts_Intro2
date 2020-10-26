@@ -3,7 +3,7 @@ package org.apache.struts.register.action;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts.register.model.Person;
 
-public class RegisterAction extends ActionSupport {
+public class Register extends ActionSupport {
     /* By using a Java model class to encapsulate the data provided by the form, separate attributes (with
        get/set methods) for each form field are unnecessary. */
     private static final long serialVersionUID = 1L;
