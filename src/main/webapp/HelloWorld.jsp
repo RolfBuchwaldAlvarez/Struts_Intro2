@@ -26,6 +26,7 @@
              String equivalents. --%>
         <%-- If the value returned by the get-method is an object, the property tag will cause S2 to call the
              object's toString-method. --%>
+        <h1><s:text name="greeting" /></h1>
         <h2><s:property value="messageStore.message" /></h2>
 
         <%-- Even though getHelloCount() returns an integer type, S2 converted it to type String and placed it
