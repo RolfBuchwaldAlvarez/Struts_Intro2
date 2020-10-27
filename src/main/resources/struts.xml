@@ -14,16 +14,33 @@
 
     <package name="basicstruts2" extends="struts-default">
 
+        <!-- Relates the result value to a specific view page. For example the result “securityerror” will
+             cause the framework to redirect the user’s browser to the securityerror.jsp view page. -->
         <global-results>
             <result name="securityerror">/securityerror.jsp</result>
             <result name="error">/error.jsp</result>
         </global-results>
 
+        <!-- Tells S2F what to do if an uncaught exception of the type specified (or a child of that type) is
+             thrown by the the application. For example if a SecurityBreachException is thrown but not caught,
+             the Struts 2 Action class will return a result of “securityerror”. All other uncaught exceptions
+             will cause the Struts 2 Action class to return a result of “error”. -->
         <global-exception-mappings>
             <exception-mapping exception="org.apache.struts.register.exceptions.SecurityBreachException"
                                result="securityerror" />
             <exception-mapping exception="java.lang.Exception" result="error" />
         </global-exception-mappings>
+
+        <!-- Specifies that if the method throwSecurityException throws an uncaught exception of type
+             SecurityBreachException S2F should return a result of login. The login result will cause
+             the user’s browser to be redirected to login.jsp. Action-specific exception mapping comes
+             before global exception mapping! -->
+        <action name="actionspecificexception" class="org.apache.struts.register.action.Register"
+                method="throwSecurityException">
+            <exception-mapping exception="org.apache.struts.register.exceptions.SecurityBreachException" result="login" />
+            <result>/register.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
 
         <action name="index">
             <result>/index.jsp</result>
