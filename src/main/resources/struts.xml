@@ -38,8 +38,8 @@
         <!-- Relates the result value to a specific view page. For example the result “securityerror” will
              cause the framework to redirect the user’s browser to the securityerror.jsp view page. -->
         <global-results>
-            <result name="securityerror">/securityerror.jsp</result>
             <result name="error">/error.jsp</result>
+            <result name="securityerror">/securityerror.jsp</result>
         </global-results>
 
         <!-- Tells S2F what to do if an uncaught exception of the type specified (or a child of that type) is
@@ -58,9 +58,25 @@
              before global exception mapping! -->
         <action name="actionspecificexception" class="org.apache.struts.register.action.Register"
                 method="throwSecurityException">
-            <exception-mapping exception="org.apache.struts.register.exceptions.SecurityBreachException" result="login" />
+            <exception-mapping exception="org.apache.struts.register.exceptions.SecurityBreachException"
+                               result="login" />
             <result>/register.jsp</result>
             <result name="login">/login.jsp</result>
+        </action>
+
+        <!-- Some more action-specific exception handling -->
+        <action name="causesecurityexception" class="org.apache.struts.register.action.Register"
+                method="throwSecurityException">
+            <result>/register.jsp</result>
+        </action>
+
+        <action name="causeexception" class="org.apache.struts.register.action.Register" method="throwException">
+            <result>/register.jsp</result>
+        </action>
+
+        <action name="causenullpointerexception" class="org.apache.struts.register.action.Register"
+                method="throwNullPointerException">
+            <result>/register.jsp</result>
         </action>
 
         <action name="index">
