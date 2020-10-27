@@ -14,6 +14,27 @@
 
     <package name="basicstruts2" extends="struts-default">
 
+        <!-- ExceptionMappingInterceptor class API - S2 interceptor of the default stack -->
+        <!-- Configures a new stack of Struts 2 interceptors named appDefaultStack. This stack of interceptors
+             is based upon the defaultStack of interceptors (which are the S2 interceptors that execute by default
+             whenever an Action class method is called by S2F). -->
+        <interceptors>
+            <interceptor-stack name="appDefaultStack">
+                <interceptor-ref name="defaultStack">
+                    <!-- In the definition of the struts defaultStack, the ExceptionMappingInterceptor is given the
+                         name of exception. B< specifying a param node with name="exception.logEnabled" and a value
+                         of "true", the logEnabled parameter of ExceptionMappingInterceptor class is set to "true".
+                         Now when the application throws an uncaught exception, S2F will handle it and will also
+                         write an entry to the log that includes the stack trace. -->
+                    <param name="exception.logEnabled">true</param>
+                    <!-- Level to log exceptions set to be ERROR -->
+                    <param name="exception.logLevel">ERROR</param>
+                </interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+
+        <default-interceptor-ref name="appDefaultStack" />
+
         <!-- Relates the result value to a specific view page. For example the result “securityerror” will
              cause the framework to redirect the user’s browser to the securityerror.jsp view page. -->
         <global-results>
