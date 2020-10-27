@@ -9,6 +9,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Basic Struts 2 Application - Welcome</title>
+        <s:head/>
     </head>
     <body>
         <h1>Welcome To Struts 2!</h1>
@@ -64,6 +65,20 @@
         <p><s:a href="%{registerInputLinkES}">Por favor, regístrese</s:a> para nuestro sorteo</p>
 
         <hr />
-        <s:text name="contact" />
+        <s:text name="contact" /><br/>
+
+        <!-- Using the configuration browser plugin and the debugging interceptor. These tools should only be used
+             in development! Prior to creating the war file for deployment to production, devMode should be changed
+             to "false" and the debugging links should be removed. Also the level of logging might then be adjusted
+             to a higher level ("info" or "warn") to reduce the number of log messages. -->
+        <h3>Debugging</h3>
+
+        <p><a href="<s:url action="index" namespace="config-browser" />">Launch the configuration browser</a></p>
+        <s:url action="index" var="indexLink">
+            <s:param name="debug">browser</s:param>
+        </s:url>
+        <p><a href="${indexLink}">Reload this page with debugging</a></p>
+
+        <s:debug/>
     </body>
 </html>
